@@ -1,10 +1,12 @@
 use std::env;
 
 fn main() {
-  let current_dir = current_dir();
-  let current_exe = current_exe();
-  println!("Current directory: {current_dir}");
-  println!("Current exe: {current_exe}");
+  display_sys_infos();
+}
+
+fn display_sys_infos() {
+  println!("Current directory: {}", current_dir());
+  println!("Current exe: {}", current_exe());
 }
 
 fn current_dir() -> String {
